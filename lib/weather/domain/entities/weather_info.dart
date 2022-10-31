@@ -17,19 +17,19 @@ class WeatherInfo extends Equatable {
   final int cod;
 
   const WeatherInfo(
-      this.coord,
-      this.weather,
-      this.base,
-      this.main,
-      this.visibility,
-      this.wind,
-      this.clouds,
-      this.dt,
-      this.sys,
-      this.timezone,
-      this.id,
-      this.name,
-      this.cod);
+      {required this.coord,
+      required this.weather,
+      required this.base,
+      required this.main,
+      required this.visibility,
+      required this.wind,
+      required this.clouds,
+      required this.dt,
+      required this.sys,
+      required this.timezone,
+      required this.id,
+      required this.name,
+      required this.cod});
 
   @override
   List<Object?> get props => [
