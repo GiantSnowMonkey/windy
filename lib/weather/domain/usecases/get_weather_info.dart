@@ -12,6 +12,6 @@ class GetWeatherInfo {
   Future<Either<Failure, WeatherInfo?>> call(
     Params params,
   ) async {
-    return await repo.getWeatherInfo();
+    return await repo.getWeatherInfo(params);
   }
 }
