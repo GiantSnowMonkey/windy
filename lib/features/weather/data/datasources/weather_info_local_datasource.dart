@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../core/errors/exceptions.dart';
+import '../../../../../core/errors/exceptions.dart';
 import '../models/weather_info_model.dart';
 
 abstract class WeatherInfoLocalDataSource {
