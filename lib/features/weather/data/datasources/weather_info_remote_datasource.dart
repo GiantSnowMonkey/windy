@@ -16,14 +16,14 @@ class WeatherInfoRemoteDataSourceImpl implements WeatherInfoRemoteDataSource {
   WeatherInfoRemoteDataSourceImpl({required this.dio});
 
   @override
-  Future<WeatherInfoModel>? getWeatherInfo(Params params) async {
+  Future<WeatherInfoModel>? getWeatherInfo(params) async {
     final response = await dio.get(
       siteUrl,
       queryParameters: {
         'lat': params.lat,
         'lon': params.lon,
         'appid': Params.appid,
-        'metric': params.units
+        'units': params.units
       },
     );
     if (response.statusCode == 200) {

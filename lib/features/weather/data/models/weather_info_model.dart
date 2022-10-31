@@ -2,17 +2,17 @@ import '../../domain/entities/weather_info.dart';
 
 class WeatherInfoModel extends WeatherInfo {
   const WeatherInfoModel({
-    required Map<String, double> coord,
-    required Map<int, Map<String, dynamic>> weather,
+    required Map<String, dynamic> coord,
+    required List<dynamic> weather,
     required String base,
-    required Map<String, double> main,
-    required double visibility,
-    required Map<String, double> wind,
-    required Map<String, double> clouds,
-    required double dt,
+    required Map<String, dynamic> main,
+    required int visibility,
+    required Map<String, dynamic> wind,
+    required Map<String, dynamic> clouds,
+    required int dt,
     required Map<String, dynamic> sys,
-    required double timezone,
-    required double id,
+    required int timezone,
+    required int id,
     required String name,
     required int cod,
   }) : super(

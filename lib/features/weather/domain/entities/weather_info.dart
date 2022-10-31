@@ -2,17 +2,17 @@ import 'dart:core';
 import 'package:equatable/equatable.dart';
 
 class WeatherInfo extends Equatable {
-  final Map<String, double> coord;
-  final Map<int, Map<String, dynamic>> weather;
+  final Map<String, dynamic> coord;
+  final List<dynamic> weather;
   final String base;
-  final Map<String, double> main;
-  final double visibility;
-  final Map<String, double> wind;
-  final Map<String, double> clouds;
-  final double dt;
+  final Map<String, dynamic> main;
+  final int visibility;
+  final Map<String, dynamic> wind;
+  final Map<String, dynamic> clouds;
+  final int dt;
   final Map<String, dynamic> sys;
-  final double timezone;
-  final double id;
+  final int timezone;
+  final int id;
   final String name;
   final int cod;
 
