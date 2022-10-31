@@ -22,16 +22,16 @@ class WeatherInfoRepoImpl implements WeatherInfoRepo {
   Future<Either<Failure, WeatherInfo?>> getWeatherInfo(params) async {
     if (await networkInfoImpl.isConnected) {
       try {
-        final remoteActivity = await remoteDataSource.getWeatherInfo(params);
-        localDataSource.cacheWeatherInfo(remoteActivity);
-        return Right(remoteActivity);
+        final remoteWeather = await remoteDataSource.getWeatherInfo(params);
+        localDataSource.cacheWeatherInfo(remoteWeather);
+        return Right(remoteWeather);
       } on ServerException {
         return Left(ServerFailure(errorMessage: 'This is a server exception'));
       }
     } else {
       try {
-        final localActivity = await localDataSource.getLastWeatherInfo();
-        return Right(localActivity);
+        final localWeather = await localDataSource.getLastWeatherInfo();
+        return Right(localWeather);
       } on CacheException {
         return Left(CacheFailure(errorMessage: 'This is a cache exception'));
       }

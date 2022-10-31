@@ -6,7 +6,7 @@ import '../../../../../core/errors/exceptions.dart';
 import '../models/weather_info_model.dart';
 
 abstract class WeatherInfoLocalDataSource {
-  Future<void>? cacheWeatherInfo(WeatherInfoModel? activityToCache);
+  Future<void>? cacheWeatherInfo(WeatherInfoModel? weatherToCache);
   Future<WeatherInfoModel>? getLastWeatherInfo();
 }
 
