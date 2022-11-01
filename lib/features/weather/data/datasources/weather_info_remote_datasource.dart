@@ -1,10 +1,9 @@
 import 'package:dio/dio.dart';
 
 import '../../../../../core/errors/exceptions.dart';
+import '../../../../core/usecases/consts.dart';
 import '../../../../core/usecases/usecase.dart';
 import '../models/weather_info_model.dart';
-
-const String siteUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 abstract class WeatherInfoRemoteDataSource {
   Future<WeatherInfoModel>? getWeatherInfo(Params params);

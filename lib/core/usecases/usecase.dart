@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-const String apiKey = '31746fb4b791cab85b915be7c308614f';
+import 'consts.dart';
 
 class Params extends Equatable {
   static const String appid = apiKey;
