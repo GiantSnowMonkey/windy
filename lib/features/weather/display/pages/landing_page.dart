@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:windy/core/usecases/consts.dart';
 import '../provider/weather_info_provider.dart';
-import '../widgets/custom_oval_shape_widget.dart';
 import '../widgets/widgets.dart';
 
 class LandingPage extends StatelessWidget {
